@@ -12,21 +12,23 @@
         html{
             height: 100%;
         }
-        /*@keyframes myfirst {*/
-        /*    from {opacity:0}*/
-        /*    to{opacitu:100}*/
-        /*}*/
+        @keyframes myfirst {
+            from {opacity:0}
+            to{opacitu:100}
+        }
+        h1{
+            animation:myfirst 1s infinite;
+        }
 
-        /*h1{*/
-        /*    animation:myfirst 1s infinite;*/
-        /*}*/
-        @keyframes first {
-            form{background: aqua;}
-            tu{background: antiquewhite;}
+        @keyframes gae {
+            from {background:red;}
+            to{background:green}
         }
         p{
-            animation: first 2s ;
+            animation:gae 1s infinite;
         }
+
+
     </style>
 </head>
 
