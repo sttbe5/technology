@@ -1,0 +1,37 @@
+#container{
+    width: 600px;
+    height: 300px;
+    border: black solid 10px;
+    margin: 0 auto;
+}
+#container>div{
+    width: 300px;
+    height: 300px;
+    float: left;
+    text-align: center;
+}
+#mine{
+    background-color: aquamarine;
+}
+#computer{
+    background-color: lightslategray;
+}
+#computerChoice>IMG{
+    transform: scalex(-1);
+}
+#myChoice{
+    position: relative; /*脱离文档流*/
+    top: 5%; /*偏移*/
+}
+#computerChoice{
+    position: relative; /*脱离文档流*/
+    top: 5%; /*偏移*/
+}
+#inpu{
+    position: relative; /*脱离文档流*/
+    top:5%; /*偏移*/
+}
+#container>#result{
+    font-size:50px;
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouse</title>
+  <style>
+    #bgmbutton{
+        height: 1000px;
+        width: 1000px;
+        background-image: url('../music/miao.gif');
+        text-align: center;
+    }
+      </style>
+</head>
+<body >
+<audio id="bgm" src="../music/你要的全拿走.ogg"   preload="auto" autoplay="autoplay" loop="loop"></audio>
+<div id="bgmbutton" onclick="control()"></div>
+</body>
+<script>
+    function  control(){
+        if (document.getElementById("bgm").paused){
+            document.getElementById("bgm").play();
+            document.getElementById("bgmbutton").style.backgroundImage= "url('../music/miao.gif')";
+        }
+        else{
+            document.getElementById("bgm").pause();
+            document.getElementById("bgmbutton").style.backgroundImage= "url('../music/mao.gif')";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dice</title>
+  <style>
+    body{
+      font-family: kaiti;
+      font-size:152px;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+<p id="message"></p>
+<p id="id"></p>
+</body>
+</html>
+<script>
+    // "这是第一种方式"x
+    // var a=Math.random()
+    // var binggo=false;
+    // function dianshu(){
+    //     if (binggo){
+    //         return;
+    //     }
+    //     var dianshu=prompt("猜猜摇到几")
+    //     if (dianshu==a){
+    //         document.write("猜中了")
+    //         binggo=true;
+    //     }
+    //     else if (dianshu>a) {
+    //         document.write("猜大了")
+    //     }
+    //     else if (dianshu<a) {
+    //         document.write("猜小了")
+    //     }
+    // }
+    // var a=Math.random();
+    // a = Math.floor(a*6)+1;
+    // console.info(a)
+    // document.write("<img src=\"../002console/images/"+a+".jpg\" height=\"128\" width=\"227\"/>")
+    // dianshu();
+    // dianshu();.
+
+    // 新的方式z
+    // var a=Math.random();
+    // a=Math.floor(a*6)+1;
+    // console.info(a)
+    // var dui=false;
+    // function jihui(){
+    //     var cai=prompt("猜一猜点数多少")
+    //     if (cai==a){
+    //         document.getElementById("message").innerHTML="猜对了"
+    //         dui=true;
+    //     }
+    //     else if (cai>a){
+    //         var cai=prompt("猜大了，再猜")
+    //         if (cai==a){
+    //             document.getElementById("message").innerHTML="猜对了"
+    //         }
+    //         else if (cai>a){
+    //             var cai=prompt("还是大了,猜小一点")
+    //             if (cai==a){
+    //                 document.getElementById("message").innerHTML="猜对了"
+    //             }
+    //             else{
+    //                 document.getElementById("message").innerHTML="还是错了，点数是"+a
+    //             }
+    //         }
+    //         else if (cai<a){
+    //             var cai=prompt("猜小了，再猜")
+    //             if (cai==a){
+    //                 document.getElementById("message").innerHTML="猜对了"
+    //             }
+    //             else{
+    //                 document.getElementById("message").innerHTML="还是错了，点数是"+a
+    //             }
+    //         }
+    //         else{
+    //             document.getElementById("message").innerHTML="还是错了，点数是"+a
+    //         }
+    //     }
+    //     else if (cai<a){
+    //         var cai=prompt("猜小了，再猜")
+    //         if (cai==a){
+    //             document.getElementById("message").innerHTML="猜对了"
+    //         }
+    //         else if (cai>a){
+    //             var cai=prompt("猜大了，再猜")
+    //             if (cai==a){
+    //                 document.getElementById("message").innerHTML="猜对了"
+    //             }
+    //             else{
+    //                 document.getElementById("message").innerHTML="还是错了，点数是"+a
+    //             }
+    //         }
+    //         else if (cai<a){
+    //             var cai=prompt("还往小了猜，憨批")
+    //             if (cai==a){
+    //                 document.getElementById("message").innerHTML="猜对了";
+    //             }
+    //             else {
+    //                 document.getElementById("message").innerHTML="还是错，点数是"+a
+    //             }
+    //         }
+    //         else{
+    //             document.getElementById("message").innerHTML="还是错了，点数是"+a
+    //         }
+    //     }
+    //     document.getElementById("id").innerHTML="<img src=\"../002console/images/drin/"+a+".png\" height=\"168\" width=\"173\"/>"
+    // }
+    // jihui()
+
+    // 逻辑判断x
+    // var random=Math.random();
+    // random=Math.floor(random*6)+1;
+    // console.info(random)
+    // var dui=false;
+    // function jihui(){
+    //     if (dui){
+    //         return;
+    //     }
+    //     var cai=prompt("猜一猜点数多少")
+    //     console.info("random==="+random);
+    //     console.info("cai==="+cai)
+    //     var diff=Math.abs(random-cai);
+    //     console.info("diff====="+diff);
+    //     var str;
+    //     if (cai==random){
+    //         str="猜对了"+"<img src=\"../002console/images/drin/"+random+".png\" height=\"168\" width=\"173\"/>"
+    //         dui=true;
+    //     }
+    //     else if (cai>random){
+    //         if (diff>1){
+    //             str ="猜的太大了";
+    //         }
+    //         else {
+    //             str ="猜大了";
+    //         }
+    //     }
+    //     else{
+    //         if (diff<1){
+    //             str ="猜的太小了";
+    //         }
+    //         else{
+    //             str ="猜小了";
+    //         }
+    //     }
+    //     document.getElementById("message").innerHTML= str
+    // }
+    // jihui()
+
+    // zjx
+    var random=Math.random();
+    random=Math.floor(random*6)+1;
+    console.info(random)
+    var dui=false
+    function zaicai(){
+        if (dui){
+            return
+        }
+        var cai=prompt("猜一猜点数是多少")
+        var diff=Math.abs(random-cai)
+        console.info(diff)
+        var word;
+        var tupian;
+        if (random==cai){
+            word="猜对了"
+            dui=true;
+        }
+        else if (cai>random){
+            var cai=prompt("猜大了，再猜猜")
+            if (cai==random){
+                word="猜对了";
+            }
+            else if (cai<random){
+                var cai=prompt("猜小了")
+                if (cai==random){
+                    word="猜对了"
+                }
+                else {
+                    word="还是错了,点数是"+random
+                }
+            }
+            else {
+                word="还是错了,点数是"+random
+            }
+        }
+        else if (cai<random){
+            var cai=prompt("猜小了，再猜猜")
+            if (cai==random){
+                word="猜对了";
+            }
+            else if (cai>random){
+                var cai=prompt("猜大了")
+                if (cai==random){
+                    word="猜对了"
+                }
+                else {
+                    word="还是错了,点数是"+random
+                }
+            }
+            else {
+                word="还是错了,点数是"+random
+            }
+        }
+        document.getElementById("message").innerHTML=word
+        document.getElementById("id").innerHTML="<img src=\"../002console/images/drin/"+random+".png\" height=\"168\" width=\"173\"/>"
+    }
+    zaicai()
+
+    // 增加判定
+    // var random=Math.random();
+    // random=Math.floor(random*6)+1;
+    // console.info(random)
+    // var dui=false;
+    // function jihui(){
+    //     if (dui){
+    //         return;
+    //     }
+    //     var cai=prompt("猜一猜点数多少")
+    //     if(!Number.isInteger(cai/1)||cai>6||cai<1){
+    //         document.getElementById("message").innerHTML="输入错误！"
+    //         return;
+    //     }
+    //     console.info("random==="+random);
+    //     console.info("cai==="+cai)
+    //     var diff=Math.abs(random-cai);
+    //     console.info("diff====="+diff);
+    //     var str;
+    //     if (cai==random){
+    //         str="猜对了"+"<img src=\"../002console/images/drin/"+random+".png\" height=\"168\" width=\"173\"/>"
+    //         dui=true;
+    //     }
+    //     else if (cai>random){
+    //         if (diff>1){
+    //             str ="猜的太大了";
+    //         }
+    //         else {
+    //             str ="猜大了";
+    //         }
+    //     }
+    //     else{
+    //         if (diff<1){
+    //             str ="猜的太小了";
+    //         }
+    //         else{
+    //             str ="猜小了";
+    //         }
+    //     }
+    //     document.getElementById("message").innerHTML= str
+    // }
+    // jihui()
+
+
+</script>
